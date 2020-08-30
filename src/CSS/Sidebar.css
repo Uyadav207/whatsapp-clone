@@ -6,8 +6,14 @@
 .sidebar_Chats {
     flex: 1;
     background-color: white;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
+.sidebar_Chats::-webkit-scrollbar {
+    display: none;
+}
+
 .sidebar_header {
     display: flex;
     justify-content: space-between;
@@ -47,7 +53,7 @@
     padding: 10px;
 }
 
-.sidebar_searchContainer .mar {
+.sidebar_searchContainer > input {
     border: none;
     margin-left: 10px;
 }
