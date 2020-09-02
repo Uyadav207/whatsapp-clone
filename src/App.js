@@ -3,15 +3,17 @@ import './App.css'
 import Sidebar from './components/Sidebar';
 import Chat from './components/Chat';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from '../src/components/Login'
+import { useStateValue } from './Reducer/StateProvider';
 
 function App() {
 
-const [user, setUser] = useState(null);
+const [{user}, dispatch] = useStateValue();
 
   return (
     <div className="App">
       {!user ? (
-        <h1>LoginScreen</h1>
+        <Login />
       ):(
     <div className="app_body">
       <Router>
