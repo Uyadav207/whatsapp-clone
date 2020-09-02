@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom';
 import db from '../firebase';
 import { useStateValue } from '../Reducer/StateProvider';
 import firebase from '../firebase'
+import { firestore } from 'firebase';
 
 function Chat() {
 
@@ -51,8 +52,8 @@ function Chat() {
         .collection('messages').add({
             message: input,
             name: user.displayName,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        })
+            timestamp: firebase.firestore.Fieldvalue.serverTimestamp()
+        });
         setInput('');
     }
 
