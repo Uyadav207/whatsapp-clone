@@ -12,4 +12,21 @@ The whatsApp clone is UI/UX cloning of Whatsapp by facebook. The Clone include e
 - HTML5
 - Context API
 
-![Image]()
+![Image-Will-be-shortly available]()
+
+# How to contribute
+
+The contibutors want to contribute the repository can see the [contribution Guide](https://github.com/Uyadav207/). This Guide is to be strictly followed by the contributor. Incase of any help you want can contact to the developer or raise an [issue](https://github.com/Uyadav207/whatsapp-clone/issues).
+
+# Licenses
+
+The project and the contributions are bound to the rules of the [MIT]() Licensing of the Open-source Project.
+
+# Contact the maintainer
+
+
+👋 This is your maintainer for the project can contribute to the project anytime. For Joining my Team and develop and solve real-problems cannect with me.
+
+- [email](mailto:yadavutkarsh207@gmail.com)
+
+- [telegram](https://t.me/yadavutkarsh207)
