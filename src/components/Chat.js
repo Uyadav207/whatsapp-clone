@@ -20,7 +20,9 @@ function Chat() {
     const [roomName, setRoomName] = useState("")
     const [messages, setMessages] = useState([])
     const [{user}, dispatch] = useStateValue();
+   
 
+  
     useEffect(() => {
         if(roomId) {
             db.collection('rooms')
@@ -46,16 +48,16 @@ function Chat() {
     
     const sendMessage = (e) => {
         e.preventDefault();
-        console.log("you types >>> ", input);
         db.collection('rooms')
         .doc(roomId)
         .collection('messages').add({
             message: input,
             name: user.displayName,
-            timestamp: firebase.firestore.Fieldvalue.serverTimestamp()
+            timestamp: firestore.FieldValue.serverTimestamp()
         });
         setInput('');
     }
+  
 
     return (
         <div className="chat" >
@@ -63,7 +65,7 @@ function Chat() {
                 <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
             <div className="chat_headerInfo">
                 <h3>{roomName}</h3>
-                <p>Last Seen</p>
+                <p>Last Seen Recently</p>
             </div>
             <div className="chat_headerRight">
             <IconButton>
@@ -112,4 +114,4 @@ function Chat() {
     )
 }
 
-export default Chat
+export default Chat;
